@@ -35,7 +35,7 @@ export const aboutContent: AboutContent = {
     heading: 'Company Overview',
     paragraphs: [
       'Greenlife Daily was founded with a simple belief: every important occasion deserves a vehicle and a service experience to match. What began as a boutique luxury hire operation in Gauteng has grown into a trusted partner for private clients, corporate teams, production houses, and event planners across Johannesburg, Pretoria, and surrounding areas.',
-      'Today we serve a wide range of needs — from matric dances and weddings to executive roadshows, airport transfers, VIP escort movements, and on-set vehicle supply for music videos and film productions. While we showcase a curated selection of our fleet online, our broader inventory and sourcing network mean we can fulfil bespoke requests beyond what is listed.',
+      'Today we serve a wide range of needs — from matric dances and weddings to executive transport, airport transfers, VIP escort movements, and on-set vehicle supply for music videos and film productions. While we showcase a curated selection of our fleet online, our broader inventory and sourcing network mean we can fulfil bespoke requests beyond what is listed.',
       'Our team combines hospitality-minded service with rigorous operational standards. Every booking is handled with care, from the first enquiry through to the final drop-off, so you can focus on the moment — not the logistics.',
     ],
   },

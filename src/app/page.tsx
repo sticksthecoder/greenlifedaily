@@ -71,11 +71,6 @@ const organizationSchema = {
     areaServed: 'ZA',
     availableLanguage: 'English',
   },
-  sameAs: [
-    company.socialMedia.facebook,
-    company.socialMedia.instagram,
-    company.socialMedia.linkedin,
-  ],
 };
 
 const localBusinessSchema = {

@@ -1,24 +1,12 @@
 /**
- * Vehicles Page — browse all showcased vehicles with category filtering.
+ * Vehicles Page — browse all showcased vehicles.
  *
- * Requirements: 9.1, 9.2, 9.3, 9.4, 9.7, 14.1, 14.2, 14.4
+ * Requirements: 9.1, 9.2, 9.3, 9.4, 14.1, 14.2, 14.4
  */
 
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import VehiclesPageContent from '@/components/vehicles/VehiclesPageContent';
-import { serviceCategories } from '@/data/services';
 import { vehicles } from '@/data/vehicles';
-import {
-  parseVehicleFilterCategory,
-  vehicleFilterToSearchParam,
-} from '@/lib/vehicle-filter';
-
-interface VehiclesPageProps {
-  searchParams?: {
-    category?: string;
-  };
-}
 
 export const metadata: Metadata = {
   // Title: 51 chars (Req 14.1)
@@ -55,9 +43,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function VehiclesPage({ searchParams }: VehiclesPageProps) {
-  const initialCategory = parseVehicleFilterCategory(searchParams?.category);
-
+export default function VehiclesPage() {
   return (
     <main id="main-content">
       <section
@@ -73,44 +59,12 @@ export default function VehiclesPage({ searchParams }: VehiclesPageProps) {
               Premium Vehicles for Every Occasion
             </h1>
             <p className="text-charcoal-400">
-              Explore our curated selection of luxury sedans, SUVs, and executive
-              transport vehicles. Filter by service category to find the right fit,
-              then enquire about availability for your date.
+              Explore our full selection of luxury sedans, SUVs, and executive
+              transport vehicles. Enquire about availability for your date.
             </p>
           </div>
 
-          <noscript>
-            <div className="mb-8 rounded-2xl border border-charcoal-200 bg-white p-5">
-              <p className="mb-3 text-sm font-semibold text-charcoal">
-                Filter by category:
-              </p>
-              <ul className="flex flex-wrap gap-2">
-                <li>
-                  <Link
-                    href="/vehicles"
-                    className="inline-flex min-h-[44px] items-center rounded-full bg-green-600 px-4 py-2 text-sm font-medium text-white"
-                  >
-                    All
-                  </Link>
-                </li>
-                {serviceCategories.map((category) => (
-                  <li key={category}>
-                    <Link
-                      href={`/vehicles?category=${vehicleFilterToSearchParam(category)}`}
-                      className="inline-flex min-h-[44px] items-center rounded-full bg-white px-4 py-2 text-sm font-medium text-charcoal-600 ring-1 ring-charcoal-200 hover:bg-green-50"
-                    >
-                      {category}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </noscript>
-
-          <VehiclesPageContent
-            vehicles={vehicles}
-            initialCategory={initialCategory}
-          />
+          <VehiclesPageContent vehicles={vehicles} />
         </div>
       </section>
     </main>

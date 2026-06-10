@@ -95,7 +95,7 @@ export const services: Service[] = [
     shortDescription:
       'Reliable, discreet, and punctual executive transport for business travellers who value comfort, privacy, and professionalism.',
     fullDescription:
-      "Greenlife Daily's executive transport service is designed for business professionals who require a seamless, high-standard travel experience. Our professional chauffeurs understand the demands of corporate schedules — they are punctual, discreet, and committed to making every journey productive and stress-free. Vehicles are equipped with Wi-Fi availability and climate control, and can be booked on a one-off or regular retainer basis to suit your business needs.",
+      "Greenlife Daily's executive transport service is designed for business professionals who require a seamless, high-standard travel experience. Our professional chauffeurs understand the demands of corporate schedules — they are punctual, discreet, and committed to making every journey productive and stress-free. Vehicles are equipped with climate control and can be booked on a one-off or regular retainer basis to suit your business needs.",
     useCases: [
       'Executive road shows and investor meetings',
       'Intercity business travel',

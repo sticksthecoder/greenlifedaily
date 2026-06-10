@@ -51,12 +51,10 @@ function BoltIcon() {
   );
 }
 
-function SupportAgentIcon() {
+function PhoneIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="h-7 w-7" aria-hidden="true">
-      <path d="M12 3a5 5 0 0 0-5 5v1.26A6.003 6.003 0 0 0 6 14.25V16h-.75A1.75 1.75 0 0 0 3.5 17.75V19h17v-1.25A1.75 1.75 0 0 0 18.75 16H18v-1.75A6.003 6.003 0 0 0 17 9.26V8a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v1.17A4.001 4.001 0 0 1 15 14.25V16H9v-1.75a4.001 4.001 0 0 1 0-7.08V8a3 3 0 0 1 3-3z" />
-      <circle cx="12" cy="8" r="2.25" />
-      <path d="M8 20.5c1.2-1.4 2.6-2 4-2s2.8.6 4 2H8z" />
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
     </svg>
   );
 }
@@ -66,7 +64,7 @@ const valueProps: ValueProp[] = [
     icon: <StarIcon />,
     title: 'Professional Service',
     description:
-      'Uniformed, vetted drivers and courteous staff who go above and beyond to ensure a premium experience every time.',
+      'Vetted drivers and courteous staff who go above and beyond to ensure a premium experience every time.',
   },
   {
     icon: <WrenchIcon />,
@@ -93,7 +91,7 @@ const valueProps: ValueProp[] = [
       'We respond to all enquiries within two hours during business hours. Last-minute bookings are always welcome.',
   },
   {
-    icon: <SupportAgentIcon />,
+    icon: <PhoneIcon />,
     title: 'Reliable Customer Support',
     description:
       'Our team is reachable via WhatsApp, phone, and email. We stay in contact from booking to drop-off.',

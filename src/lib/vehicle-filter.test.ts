@@ -28,15 +28,15 @@ describe('vehicle filter helpers', () => {
   });
 
   it('filters vehicles to only the selected category', () => {
-    const weddingVehicles = filterVehiclesByCategory(
+    const airportVehicles = filterVehiclesByCategory(
       vehicles,
-      'Wedding Vehicle Hire',
+      'Airport Transfers',
     );
 
-    expect(weddingVehicles.length).toBeGreaterThan(0);
+    expect(airportVehicles.length).toBeGreaterThan(0);
     expect(
-      weddingVehicles.every(
-        (vehicle) => vehicle.category === 'Wedding Vehicle Hire',
+      airportVehicles.every(
+        (vehicle) => vehicle.category === 'Airport Transfers',
       ),
     ).toBe(true);
   });

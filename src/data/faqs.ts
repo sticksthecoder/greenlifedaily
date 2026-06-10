@@ -15,7 +15,7 @@ export const faqs: FaqItem[] = [
     id: 'faq-002',
     question: 'Do you offer chauffeur or driver services?',
     answer:
-      'Yes. All our vehicles can be booked with a professional, uniformed chauffeur. Our drivers are vetted, experienced, and familiar with Johannesburg, Pretoria, and surrounding areas. Chauffeur-driven bookings are especially popular for airport transfers, executive transport, weddings, and VIP events. Simply request a driver when submitting your quote.',
+      'Yes. All our vehicles can be booked with a professional chauffeur. Our drivers are vetted, experienced, and familiar with Johannesburg, Pretoria, and surrounding areas. Simply request a driver when submitting your quote.',
   },
   {
     id: 'faq-003',
@@ -33,13 +33,13 @@ export const faqs: FaqItem[] = [
     id: 'faq-005',
     question: 'What executive transport options do you offer?',
     answer:
-      'We provide end-to-end executive transport solutions including airport meet-and-greet pickups, roadshows, board meeting transfers, client entertainment, and multi-day executive hire. Our fleet includes flagship sedans and premium SUVs with tinted windows, climate control, and Wi-Fi connectivity. All executive bookings are handled with strict confidentiality and punctuality.',
+      'We provide executive transport solutions including airport meet-and-greet pickups, board meeting transfers, and client entertainment. Our fleet includes flagship sedans and premium SUVs with tinted windows and climate control. All executive bookings are handled with strict confidentiality and punctuality.',
   },
   {
     id: 'faq-006',
     question: 'How do I request a quote?',
     answer:
-      'Requesting a quote is quick and easy. You can use the "Request a Quote" form on our website — simply fill in your name, contact details, the service you need, and your preferred date, and we will get back to you promptly. Alternatively, you can send us a message directly on WhatsApp for an even faster response. We aim to respond to all enquiries within two hours during business hours.',
+      'Requesting a quote is quick and easy. You can use the "Request a Quote" form on our website. Simply fill in your name, contact details, the service you need, and your preferred date, and we will get back to you promptly. Alternatively, you can send us a message directly on WhatsApp for an even faster response. We aim to respond to all enquiries within two hours during business hours.',
   },
   {
     id: 'faq-007',
