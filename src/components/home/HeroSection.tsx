@@ -39,9 +39,10 @@ export default function HeroSection() {
         {/* Sub-headline (Req 1.2) */}
         <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-charcoal-200 sm:text-xl">
           From matric dances and weddings to executive transport, airport
-          transfers, and film productions — Greenlife Daily delivers an
-          immaculate fleet and professional service for every moment that
-          matters.
+          transfers, and film productions,{' '}
+          <span className="font-bold text-green-400">Greenlife Daily</span>{' '}
+          delivers an immaculate fleet and professional service for every moment
+          that matters.
         </p>
 
         {/* CTA buttons — single-column on mobile (Req 1.6), row on sm+ */}

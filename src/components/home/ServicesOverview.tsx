@@ -1,5 +1,5 @@
 /**
- * ServicesOverview — lists all nine service categories with overview cards.
+ * ServicesOverview — preview of service categories with link to full services page.
  *
  * Requirements: 3.1, 3.2, 3.3
  */
@@ -8,7 +8,10 @@ import Link from 'next/link';
 import ServiceCard from '@/components/shared/ServiceCard';
 import { services } from '@/data/services';
 
+const PREVIEW_SERVICE_COUNT = 3;
+
 export default function ServicesOverview() {
+  const previewServices = services.slice(0, PREVIEW_SERVICE_COUNT);
   return (
     <section
       id="services"
@@ -33,12 +36,12 @@ export default function ServicesOverview() {
           </p>
         </div>
 
-        {/* Service cards grid — all nine services (Req 3.1) */}
+        {/* Service cards grid — preview of three services */}
         <ul
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           aria-label="Services offered by Greenlife Daily"
         >
-          {services.map((service) => (
+          {previewServices.map((service) => (
             <li key={service.id} className="flex flex-col">
               {/*
                * Wrap card in a link to the relevant anchor on the Services Page.
@@ -61,7 +64,7 @@ export default function ServicesOverview() {
             href="/services"
             className="inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-green-600 px-8 py-3 text-sm font-semibold text-white shadow-md transition-colors duration-200 hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 active:bg-green-800"
           >
-            Explore All Services
+            Explore More Services
             <svg
               className="h-4 w-4"
               viewBox="0 0 20 20"

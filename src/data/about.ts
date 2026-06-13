@@ -35,19 +35,19 @@ export const aboutContent: AboutContent = {
     heading: 'Company Overview',
     paragraphs: [
       'Greenlife Daily was founded with a simple belief: every important occasion deserves a vehicle and a service experience to match. What began as a boutique luxury hire operation in Gauteng has grown into a trusted partner for private clients, corporate teams, production houses, and event planners across Johannesburg, Pretoria, and surrounding areas.',
-      'Today we serve a wide range of needs — from matric dances and weddings to executive transport, airport transfers, VIP escort movements, and on-set vehicle supply for music videos and film productions. While we showcase a curated selection of our fleet online, our broader inventory and sourcing network mean we can fulfil bespoke requests beyond what is listed.',
-      'Our team combines hospitality-minded service with rigorous operational standards. Every booking is handled with care, from the first enquiry through to the final drop-off, so you can focus on the moment — not the logistics.',
+      'Today we serve a wide range of needs, from matric dances and weddings to executive transport, airport transfers, VIP escort movements, and on set vehicle supply for music videos and film productions. While we showcase a curated selection of our fleet online, our broader inventory and sourcing network mean we can fulfil bespoke requests beyond what is listed.',
+      'Our team combines hospitality minded service with rigorous operational standards. Every booking is handled with care, from the first enquiry through to the final drop off, so you can focus on the moment, not the logistics.',
     ],
   },
   mission: {
     heading: 'Our Mission',
     statement:
-      'To deliver impeccably presented vehicles and dependable, professional transport that elevates every journey — giving our clients confidence, comfort, and peace of mind on the occasions that matter most.',
+      'To deliver impeccably presented vehicles and dependable, professional transport that elevates every journey, giving our clients confidence, comfort, and peace of mind on the occasions that matter most.',
   },
   vision: {
     heading: 'Our Vision',
     statement:
-      'To be South Africa\'s most trusted premium vehicle hire brand — recognised for exceptional service, operational excellence, and a fleet that sets the standard for luxury transport nationwide.',
+      'To be South Africa\'s most trusted premium vehicle hire brand, recognised for exceptional service, operational excellence, and a fleet that sets the standard for luxury transport nationwide.',
   },
   values: [
     {
@@ -58,7 +58,7 @@ export const aboutContent: AboutContent = {
     {
       title: 'Reliability',
       description:
-        'We honour commitments. Vehicles arrive prepared, drivers are on time, and communication stays clear throughout your hire — because your schedule cannot afford surprises.',
+        'We honour commitments. Vehicles arrive prepared, drivers are on time, and communication stays clear throughout your hire, because your schedule cannot afford surprises.',
     },
     {
       title: 'Customer Satisfaction',
@@ -73,7 +73,7 @@ export const aboutContent: AboutContent = {
     {
       title: 'Excellence',
       description:
-        'We pursue excellence in every detail — vehicle presentation, route planning, client communication, and post-hire follow-up — so each hire feels effortlessly premium.',
+        'We pursue excellence in every detail: vehicle presentation, route planning, client communication, and post hire follow up, so each hire feels effortlessly premium.',
     },
   ],
 };

@@ -8,17 +8,17 @@ interface LogoProps {
 }
 
 /** Source dimensions — updated when logo asset changes. */
-const LOGO_WIDTH = 1024;
-const LOGO_HEIGHT = 682;
+const LOGO_WIDTH = 568;
+const LOGO_HEIGHT = 439;
 
 const SOURCES = {
   navbar: '/images/logo.png',
-  footer: '/images/logo-dark.png',
+  footer: '/images/logo.png',
 } as const;
 
 const SIZES = {
-  navbar: 'h-16 w-auto sm:h-[4.5rem] md:h-20',
-  footer: 'h-24 w-auto sm:h-28 md:h-32',
+  navbar: 'h-20 w-auto sm:h-24 md:h-28',
+  footer: 'h-28 w-auto sm:h-32 md:h-40',
 } as const;
 
 export default function Logo({ variant = 'navbar', className = '' }: LogoProps) {

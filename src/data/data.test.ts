@@ -16,7 +16,7 @@ describe('vehicles data integrity', () => {
 });
 
 describe('services data integrity', () => {
-  it('contains all nine ServiceCategory values', () => {
+  it('contains all ten ServiceCategory values', () => {
     const expectedCategories: ServiceCategory[] = [
       'Luxury Vehicle Hire',
       'Matric Dance Transport',
@@ -27,6 +27,7 @@ describe('services data integrity', () => {
       'VIP Escort Services',
       'Music Video Vehicle Hire',
       'TV & Film Production Vehicle Hire',
+      'Vehicle Branding',
     ];
 
     const presentCategories = services.map((s) => s.category);
@@ -36,8 +37,8 @@ describe('services data integrity', () => {
     }
   });
 
-  it('serviceCategories list contains all nine entries', () => {
-    expect(serviceCategories).toHaveLength(9);
+  it('serviceCategories list contains all ten entries', () => {
+    expect(serviceCategories).toHaveLength(10);
   });
 });
 

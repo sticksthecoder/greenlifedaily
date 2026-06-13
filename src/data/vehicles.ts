@@ -160,6 +160,30 @@ export const vehicles: Vehicle[] = [
 
   {
 
+    id: 'bmw-x3',
+
+    name: 'BMW X3',
+
+    category: 'Luxury Vehicle Hire',
+
+    passengerCapacity: 5,
+
+    transmission: 'Automatic',
+
+    fuelType: 'Petrol',
+
+    images: ['/images/vehicles/bmw-x3.webp'],
+
+    altText:
+
+      'BMW X3 luxury SUV available for premium vehicle hire',
+
+    featured: false,
+
+  },
+
+  {
+
     id: 'mercedes-s-class',
 
     name: 'Mercedes-Benz S-Class',

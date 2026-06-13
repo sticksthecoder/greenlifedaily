@@ -24,6 +24,7 @@ export const serviceCategories = [
   'VIP Escort Services',
   'Music Video Vehicle Hire',
   'TV & Film Production Vehicle Hire',
+  'Vehicle Branding',
 ] as const;
 
 export type ServiceCategory = (typeof serviceCategories)[number];

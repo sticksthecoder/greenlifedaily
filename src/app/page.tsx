@@ -7,8 +7,7 @@
 import type { Metadata } from 'next';
 import { company } from '@/data/company';
 import HeroSection from '@/components/home/HeroSection';
-import FeaturedVehiclesSection from '@/components/home/FeaturedVehiclesSection';
-import ServicesOverview from '@/components/home/ServicesOverview';
+import HomePageSections from '@/components/home/HomePageSections';
 import WhyChooseSection from '@/components/home/WhyChooseSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import FaqSection from '@/components/home/FaqSection';
@@ -137,6 +136,7 @@ const localBusinessSchema = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Rentals' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Music Video Vehicle Hire' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'TV & Film Production Vehicle Hire' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vehicle Branding' } },
     ],
   },
   priceRange: '$$',
@@ -164,11 +164,8 @@ export default function HomePage() {
         {/* 1. Hero (Req 1.x) */}
         <HeroSection />
 
-        {/* 2. Featured Vehicles + Quote Form (Req 2.x) */}
-        <FeaturedVehiclesSection />
-
-        {/* 3. Services Overview (Req 3.x) */}
-        <ServicesOverview />
+        {/* 2–4. Featured Vehicles, Services Overview, Quote Form */}
+        <HomePageSections />
 
         {/* 4. Why Choose Greenlife Daily (Req 4.x) */}
         <WhyChooseSection />

@@ -21,19 +21,19 @@ export const faqs: FaqItem[] = [
     id: 'faq-003',
     question: 'Can I book a vehicle for a matric dance?',
     answer:
-      'Absolutely. Matric dance bookings are one of our specialities. We offer a curated selection of luxury vehicles guaranteed to make a memorable entrance. Bookings are subject to availability and should be placed as early as possible, especially during peak matric season (October–November). Contact us via WhatsApp or the quote form to check availability for your date.',
+      'Absolutely. Matric dance bookings are one of our specialities. We offer a curated selection of luxury vehicles guaranteed to make a memorable entrance. Bookings are subject to availability and should be placed as early as possible, especially during peak matric season (October to November). Contact us via WhatsApp or the quote form to check availability for your date.',
   },
   {
     id: 'faq-004',
     question: 'Do you supply vehicles for music video productions?',
     answer:
-      'Yes. We regularly supply premium and exotic vehicles for music video shoots, commercials, and other media productions across Gauteng. Our vehicles are maintained in showroom condition to ensure they look their best on camera. Shoot-day bookings are flexible and can be arranged on a half-day or full-day basis. Reach out with your production requirements and we will tailor a package for you.',
+      'Yes. We regularly supply premium and exotic vehicles for music video shoots, commercials, and other media productions across Gauteng. Our vehicles are maintained in showroom condition to ensure they look their best on camera. Shoot day bookings are flexible and can be arranged on a half day or full day basis. Reach out with your production requirements and we will tailor a package for you.',
   },
   {
     id: 'faq-005',
     question: 'What executive transport options do you offer?',
     answer:
-      'We provide executive transport solutions including airport meet-and-greet pickups, board meeting transfers, and client entertainment. Our fleet includes flagship sedans and premium SUVs with tinted windows and climate control. All executive bookings are handled with strict confidentiality and punctuality.',
+      'We provide executive transport solutions including airport meet and greet pickups, board meeting transfers, and client entertainment. Our fleet includes flagship sedans and premium SUVs with tinted windows and climate control. All executive bookings are handled with strict confidentiality and punctuality.',
   },
   {
     id: 'faq-006',

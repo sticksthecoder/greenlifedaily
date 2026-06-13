@@ -6,28 +6,17 @@
  * Requirements: 2.1, 2.3, 2.4, 2.5, 2.6, 2.7
  */
 
-import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import VehicleCard from '@/components/shared/VehicleCard';
-import QuoteForm from '@/components/shared/QuoteForm';
-import QuoteFormHeader from '@/components/shared/QuoteFormHeader';
 import { featuredVehicles } from '@/data/vehicles';
 
-export default function FeaturedVehiclesSection() {
-  const [prefilledVehicle, setPrefilledVehicle] = useState<string | undefined>(
-    undefined,
-  );
+interface FeaturedVehiclesSectionProps {
+  onEnquire: (vehicleName: string) => void;
+}
 
-  /** Called when the user clicks "Enquire" on a VehicleCard */
-  const handleEnquire = useCallback((vehicleName: string) => {
-    setPrefilledVehicle(vehicleName);
-    // Scroll to the quote form smoothly
-    const el = document.getElementById('quote-form');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }, []);
-
+export default function FeaturedVehiclesSection({
+  onEnquire,
+}: FeaturedVehiclesSectionProps) {
   return (
     <section
       id="featured-vehicles"
@@ -60,7 +49,7 @@ export default function FeaturedVehiclesSection() {
         >
           {featuredVehicles.map((vehicle) => (
             <li key={vehicle.id}>
-              <VehicleCard vehicle={vehicle} onEnquire={handleEnquire} />
+              <VehicleCard vehicle={vehicle} onEnquire={onEnquire} />
             </li>
           ))}
         </ul>
@@ -93,16 +82,6 @@ export default function FeaturedVehiclesSection() {
               />
             </svg>
           </Link>
-        </div>
-
-        {/* Quote Form (Req 2.3 — pre-populated with vehicle name) */}
-        <div
-          id="quote-form"
-          className="mt-16 scroll-mt-24 rounded-2xl bg-white p-6 shadow-md ring-1 ring-charcoal-100 sm:p-10"
-          aria-label="Request a vehicle hire quote"
-        >
-          <QuoteFormHeader as="h3" />
-          <QuoteForm prefilledVehicle={prefilledVehicle} />
         </div>
       </div>
     </section>

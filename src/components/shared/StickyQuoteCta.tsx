@@ -20,7 +20,7 @@ function QuoteIcon() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="w-5 h-5 shrink-0"
+      className="w-6 h-6 shrink-0"
       aria-hidden="true"
     >
       <path
@@ -46,24 +46,18 @@ export default function StickyQuoteCta() {
   return (
     <Link
       href={QUOTE_FORM_HREF}
-      aria-label="Request a quote — navigate to our quote form"
+      aria-label="Request a quote"
       className={[
-        // Layout: fixed, right side, above WhatsApp FAB
         'fixed bottom-24 right-4 z-40',
-        // Minimum touch target: 44 × 44 px (Req 17.3) — min-h/w ensure this
-        'flex items-center gap-2 min-h-[44px] min-w-[44px]',
-        // Visual styling
-        'rounded-full bg-green-600 px-5 py-3',
-        'text-white text-sm font-semibold leading-none whitespace-nowrap shadow-lg',
-        // Transitions & hover states
+        'flex items-center justify-center min-h-[52px] min-w-[52px]',
+        'rounded-full bg-green-600 p-3.5',
+        'text-white shadow-lg',
         'transition-all duration-200 hover:bg-green-700 hover:shadow-xl',
-        // Focus ring for keyboard users
         'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600',
         'active:bg-green-800 active:scale-95',
       ].join(' ')}
     >
       <QuoteIcon />
-      <span>Request a Quote</span>
     </Link>
   );
 }

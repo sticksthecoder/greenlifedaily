@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   title: 'Our Premium Vehicle Hire Services | Greenlife Daily',
   // Description: 157 chars (Req 14.2)
   description:
-    'Explore nine premium vehicle hire services from Greenlife Daily for weddings, matric dances, executive transport, airport transfers, VIP escort, and film hire.',
+    'Explore ten premium vehicle hire services from Greenlife Daily for weddings, matric dances, executive transport, airport transfers, VIP escort, branding, and film hire.',
   openGraph: {
     title: 'Our Premium Vehicle Hire Services | Greenlife Daily',
     description:
-      'Explore nine premium vehicle hire services from Greenlife Daily for weddings, matric dances, executive transport, airport transfers, VIP escort, and film hire.',
+      'Explore ten premium vehicle hire services from Greenlife Daily for weddings, matric dances, executive transport, airport transfers, VIP escort, branding, and film hire.',
     url: 'https://www.greenlifedaily.co.za/services',
     siteName: 'Greenlife Daily',
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Premium Vehicle Hire Services | Greenlife Daily',
     description:
-      "Explore Greenlife Daily's nine premium hire services for weddings, matric dances, executive transport, airport transfers, VIP escort, and TV & film production.",
+      "Explore our ten premium hire services for weddings, matric dances, executive transport, airport transfers, VIP escort, vehicle branding, and TV and film production.",
     images: ['/images/og-services.webp'],
   },
   alternates: {
@@ -59,10 +59,9 @@ export default function ServicesPage() {
               Our Services
             </h1>
             <p className="text-charcoal-400">
-              From intimate celebrations to large-scale productions, Greenlife
-              Daily offers nine specialised vehicle hire services. Select a
-              category below to learn more, then enquire when you are ready to
-              book.
+              From intimate celebrations to large scale productions, we offer ten
+              specialised vehicle hire services. Select a category below to learn
+              more, then enquire when you are ready to book.
             </p>
           </div>
 

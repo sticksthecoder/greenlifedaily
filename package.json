@@ -15,6 +15,7 @@
     "lhci": "lhci autorun"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "14.2.35",
     "nodemailer": "^8.0.10",
     "react": "^18",
@@ -22,6 +23,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.14.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
@@ -33,11 +35,10 @@
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
-    "@lhci/cli": "^0.14.0",
     "fast-check": "^3.23.2",
-    "sharp": "^0.33.5",
     "jsdom": "^25.0.1",
     "postcss": "^8",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "vite": "^5.4.19",

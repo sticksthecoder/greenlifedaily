@@ -4,12 +4,20 @@
 
 interface QuoteFormHeaderProps {
   as?: 'h2' | 'h3';
+  /** ID for the heading — use with aria-labelledby on a parent section. */
+  headingId?: string;
 }
 
-export default function QuoteFormHeader({ as: Heading = 'h2' }: QuoteFormHeaderProps) {
+export default function QuoteFormHeader({
+  as: Heading = 'h2',
+  headingId,
+}: QuoteFormHeaderProps) {
   return (
     <div className="mb-8 text-center">
-      <Heading className="mb-2 text-center text-xl font-bold text-charcoal sm:text-2xl">
+      <Heading
+        id={headingId}
+        className="mb-2 text-center text-xl font-bold text-charcoal sm:text-2xl"
+      >
         Request a Quote
       </Heading>
       <p className="mx-auto text-center text-sm text-charcoal-400">

@@ -7,7 +7,8 @@ export type ServiceCategory =
   | 'Corporate Rentals'
   | 'VIP Escort Services'
   | 'Music Video Vehicle Hire'
-  | 'TV & Film Production Vehicle Hire';
+  | 'TV & Film Production Vehicle Hire'
+  | 'Vehicle Branding';
 
 export interface Service {
   id: string;
@@ -30,6 +31,7 @@ export const serviceCategories: ServiceCategory[] = [
   'VIP Escort Services',
   'Music Video Vehicle Hire',
   'TV & Film Production Vehicle Hire',
+  'Vehicle Branding',
 ];
 
 export const services: Service[] = [
@@ -42,7 +44,7 @@ export const services: Service[] = [
     shortDescription:
       'Experience ultimate prestige with our handpicked fleet of luxury vehicles, perfect for any occasion demanding elegance and comfort.',
     fullDescription:
-      "Greenlife Daily's luxury vehicle hire service gives you access to a carefully curated fleet of premium cars — from sleek sedans to commanding SUVs. Whether you're attending a gala event, celebrating a milestone, or simply want to arrive in style, our immaculately maintained vehicles and professional service ensure an unforgettable experience. All vehicles are comprehensively insured, GPS-tracked, and inspected before every hire.",
+      "Our luxury vehicle hire service gives you access to a carefully curated fleet of premium cars, from sleek sedans to commanding SUVs. Whether you're attending a gala event, celebrating a milestone, or simply want to arrive in style, our immaculately maintained vehicles and professional service ensure an unforgettable experience. All vehicles are comprehensively insured, GPS tracked, and inspected before every hire.",
     useCases: [
       'Special occasions and milestone celebrations',
       'High-profile business meetings',
@@ -60,7 +62,7 @@ export const services: Service[] = [
     shortDescription:
       'Arrive at your matric dance in unforgettable style with a premium vehicle that sets the tone for your special night.',
     fullDescription:
-      "Your matric dance is one of the most memorable nights of your life — and your arrival should match the occasion. Greenlife Daily provides show-stopping vehicles for matric students who want to make a grand entrance. Our professional drivers ensure you and your group travel safely and punctually, so you can focus on celebrating. Packages are available for individuals, couples, and groups, with vehicles pre-decorated on request.",
+      "Your matric dance is one of the most memorable nights of your life, and your arrival should match the occasion. We provide show stopping vehicles for matric students who want to make a grand entrance. Our professional drivers ensure you and your group travel safely and punctually, so you can focus on celebrating. Packages are available for individuals, couples, and groups, with vehicles decorated on request.",
     useCases: [
       'Individual or couple matric dance arrivals',
       'Group matric dance transport packages',
@@ -77,7 +79,7 @@ export const services: Service[] = [
     shortDescription:
       'Make your wedding day perfect with elegant bridal transport, from the ceremony to the reception, tailored to your vision.',
     fullDescription:
-      "A wedding day deserves flawless transport. Greenlife Daily offers a premium range of wedding vehicles — from classic luxury sedans to modern SUVs — dressed to complement your theme. Our experienced, formally dressed chauffeurs are punctual, discreet, and dedicated to ensuring the bride, groom, and bridal party travel in comfort and elegance. We coordinate all logistics with your wedding planner to guarantee seamless arrivals and departures throughout the day.",
+      "A wedding day deserves flawless transport. We offer a premium range of wedding vehicles, from classic luxury sedans to modern SUVs, dressed to complement your theme. Our experienced, formally dressed chauffeurs are punctual, discreet, and dedicated to ensuring the bride, groom, and bridal party travel in comfort and elegance. We coordinate all logistics with your wedding planner to guarantee seamless arrivals and departures throughout the day.",
     useCases: [
       'Bridal party transport to the ceremony',
       'Bride and groom getaway vehicle',
@@ -95,9 +97,9 @@ export const services: Service[] = [
     shortDescription:
       'Reliable, discreet, and punctual executive transport for business travellers who value comfort, privacy, and professionalism.',
     fullDescription:
-      "Greenlife Daily's executive transport service is designed for business professionals who require a seamless, high-standard travel experience. Our professional chauffeurs understand the demands of corporate schedules — they are punctual, discreet, and committed to making every journey productive and stress-free. Vehicles are equipped with climate control and can be booked on a one-off or regular retainer basis to suit your business needs.",
+      "Our executive transport service is designed for business professionals who require a seamless, high standard travel experience. Our professional chauffeurs understand the demands of corporate schedules. They are punctual, discreet, and committed to making every journey productive and stress free. Vehicles are equipped with climate control and can be booked on a one off or regular retainer basis to suit your business needs.",
     useCases: [
-      'Executive road shows and investor meetings',
+      'Board meetings and investor presentations',
       'Intercity business travel',
       'Client entertainment and transfers',
       'Conference and summit transport',
@@ -111,9 +113,9 @@ export const services: Service[] = [
     icon: '/icons/airport-transfers.svg',
     title: 'Airport Transfers',
     shortDescription:
-      'Stress-free airport transfers with flight-tracking, meet-and-greet service, and premium vehicles for every arrival and departure.',
+      'Stress free airport transfers with meet and greet service and premium vehicles for every arrival and departure.',
     fullDescription:
-      "Greenlife Daily takes the hassle out of airport travel. Our airport transfer service includes real-time flight monitoring, so your driver is always on time — even when flights are delayed. A professional chauffeur will meet you in arrivals, assist with luggage, and escort you to a spotlessly clean vehicle. Whether you're travelling for business or leisure, departing or arriving, our transfers are reliable, comfortable, and always punctual.",
+      "We take the hassle out of airport travel. A professional chauffeur will meet you in arrivals, assist with luggage, and escort you to a spotlessly clean vehicle. Whether you're travelling for business or leisure, departing or arriving, our transfers are reliable, comfortable, and always punctual.",
     useCases: [
       'International and domestic flight arrivals',
       'Departure transfers from home or hotel',
@@ -129,9 +131,9 @@ export const services: Service[] = [
     icon: '/icons/corporate-rentals.svg',
     title: 'Corporate Rentals',
     shortDescription:
-      "Flexible short- and long-term corporate vehicle rentals with fleet management support, tailored to your company's travel policy.",
+      "Flexible short and long term corporate vehicle rentals with fleet management support, tailored to your company's travel policy.",
     fullDescription:
-      "Greenlife Daily's corporate rental programme provides businesses with flexible access to a premium vehicle fleet on short- or long-term agreements. We work with HR, travel management, and executive assistants to integrate seamlessly into your existing travel policy. Our account management team handles scheduling, invoicing, and fleet coordination, so your team always has the right vehicle available. Volume discounts and dedicated account managers are available for regular clients.",
+      "Our corporate rental programme provides businesses with flexible access to a premium vehicle fleet on short or long term agreements. We work with HR, travel management, and executive assistants to integrate seamlessly into your existing travel policy. Our account management team handles scheduling, invoicing, and fleet coordination, so your team always has the right vehicle available. Volume discounts and dedicated account managers are available for regular clients.",
     useCases: [
       'Long-term executive vehicle rental',
       'Short-term project-based fleet hire',
@@ -149,7 +151,7 @@ export const services: Service[] = [
     shortDescription:
       'Secure, discreet VIP escort services for high-profile individuals requiring professional protection and premium transport.',
     fullDescription:
-      "Greenlife Daily provides comprehensive VIP escort services for high-net-worth individuals, government officials, celebrities, and visiting dignitaries. Our professional drivers are trained in defensive driving, route planning, and discretion. Convoy arrangements, advance route reconnaissance, and coordinated logistics with security teams are all available. Every detail is managed with the highest level of confidentiality and professionalism to ensure the safety and comfort of our clients.",
+      "We provide comprehensive VIP escort services for high net worth individuals, government officials, celebrities, and visiting dignitaries. Our professional drivers are trained in defensive driving, route planning, and discretion. Convoy arrangements, advance route reconnaissance, and coordinated logistics with security teams are all available. Every detail is managed with the highest level of confidentiality and professionalism to ensure the safety and comfort of our clients.",
     useCases: [
       'Government official and diplomatic transport',
       'Celebrity and high-net-worth individual transport',
@@ -167,7 +169,7 @@ export const services: Service[] = [
     shortDescription:
       'Supply your music video with striking, camera-ready luxury vehicles that enhance your visual concept and elevate production value.',
     fullDescription:
-      "Premium vehicles are a staple of compelling music video productions, and Greenlife Daily has the fleet to make your vision a reality. We supply clean, high-impact vehicles — from sports cars to luxury SUVs — for use on set, in motion, or as props. Our team works closely with directors and production coordinators to accommodate shoot schedules, multiple locations, and specific vehicle requirements. All vehicles are camera-ready and can be detailed and prepared to your creative brief.",
+      "Premium vehicles are a staple of compelling music video productions, and we have the fleet to make your vision a reality. We supply clean, high impact vehicles, from sports cars to luxury SUVs, for use on set, in motion, or as props. Our team works closely with directors and production coordinators to accommodate shoot schedules, multiple locations, and specific vehicle requirements. All vehicles are camera ready and can be detailed and prepared to your creative brief.",
     useCases: [
       'Hero vehicle feature shots',
       'Convoy and motorcade sequences',
@@ -183,15 +185,33 @@ export const services: Service[] = [
     icon: '/icons/film-production.svg',
     title: 'TV & Film Production Vehicle Hire',
     shortDescription:
-      'Reliable production vehicle hire for TV and film sets — from on-camera hero vehicles to unit base and talent transport.',
+      'Reliable production vehicle hire for TV and film sets, from on camera hero vehicles to unit base and talent transport.',
     fullDescription:
-      "Greenlife Daily supports South African and international TV and film productions with a versatile fleet available for on-camera use, talent transport, and unit base logistics. We understand production timelines are tight and budgets are closely managed, so our production coordination team ensures vehicles are where they need to be, when they need to be there. We supply everything from sleek luxury cars for period or contemporary scenes to SUVs for talent movement and supporting cast transport.",
+      "We support South African and international TV and film productions with a versatile fleet available for on camera use, talent transport, and unit base logistics. We understand production timelines are tight and budgets are closely managed, so our production coordination team ensures vehicles are where they need to be, when they need to be there. We supply everything from sleek luxury cars for period or contemporary scenes to SUVs for talent movement and supporting cast transport.",
     useCases: [
       'On-camera hero and supporting vehicles',
       'Talent and cast transport between locations',
       'Background vehicle placements',
       'Unit base and production crew transport',
       'Location scout and production recce vehicles',
+    ],
+  },
+  {
+    id: 'vehicle-branding',
+    category: 'Vehicle Branding',
+    slug: 'vehicle-branding',
+    icon: '/icons/vehicle-branding.svg',
+    title: 'Vehicle Branding',
+    shortDescription:
+      'Custom vehicle branding and wraps to promote your brand at events, on the road, or as part of a hire package.',
+    fullDescription:
+      "We offer professional vehicle branding for businesses, events, and campaigns that want maximum visibility on the move. From full wraps and partial graphics to event specific decals, our team works with your artwork and brief to present your brand on a premium vehicle. Branding can be added to hire packages for product launches, matric dances, corporate events, and promotional activations.",
+    useCases: [
+      'Corporate fleet and campaign branding',
+      'Event vehicle wraps and graphics',
+      'Promotional activations and product launches',
+      'Branded matric dance and wedding vehicles',
+      'Temporary branding for film and media productions',
     ],
   },
 ];
