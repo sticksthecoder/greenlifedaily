@@ -38,7 +38,7 @@ export const company: CompanyInfo = {
   consultantCompanyName: '',
   consultantCompanyUrl: '',
   phoneNumber: '082 330 2132',
-  email: 'sticksthedesigner@gmail.com',
+  email: 'info@greenlifedaily.co.za',
   streetAddress: '87 Tennyson Road',
   suburb: 'Lombardy East',
   postalCode: '2090',
