@@ -1,3 +1,4 @@
+
 /**
  * Home Page — assembles all home-page sections and exports page metadata.
  *
@@ -136,7 +137,6 @@ const localBusinessSchema = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate Rentals' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Music Video Vehicle Hire' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'TV & Film Production Vehicle Hire' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vehicle Branding' } },
     ],
   },
   priceRange: '$$',

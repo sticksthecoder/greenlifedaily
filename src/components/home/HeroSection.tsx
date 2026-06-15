@@ -26,7 +26,7 @@ export default function HeroSection() {
       {/* ------------------------------------------------------------------ */}
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-24 text-center sm:px-6 lg:px-8">
         {/* Pre-headline accent */}
-        <p className="mb-4 inline-block rounded-full bg-green-600/20 px-4 py-1 text-sm font-medium tracking-widest text-green-300 ring-1 ring-green-600/40">
+        <p className="mb-4 inline-block max-w-full rounded-full bg-green-600/20 px-4 py-1 text-sm font-medium tracking-wide text-green-300 ring-1 ring-green-600/40 sm:tracking-widest">
           South Africa&apos;s Premium Fleet
         </p>
 
@@ -46,7 +46,10 @@ export default function HeroSection() {
         </p>
 
         {/* CTA buttons — single-column on mobile (Req 1.6), row on sm+ */}
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div
+          id="hero-primary-ctas"
+          className="flex w-full max-w-md flex-col items-stretch gap-4 sm:max-w-none sm:flex-row sm:items-center sm:justify-center"
+        >
           {/* Primary CTA: Request a Quote (Req 1.3) */}
           <Link
             href="#quote-form"

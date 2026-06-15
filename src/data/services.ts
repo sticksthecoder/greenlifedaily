@@ -7,8 +7,7 @@ export type ServiceCategory =
   | 'Corporate Rentals'
   | 'VIP Escort Services'
   | 'Music Video Vehicle Hire'
-  | 'TV & Film Production Vehicle Hire'
-  | 'Vehicle Branding';
+  | 'TV & Film Production Vehicle Hire';
 
 export interface Service {
   id: string;
@@ -31,7 +30,6 @@ export const serviceCategories: ServiceCategory[] = [
   'VIP Escort Services',
   'Music Video Vehicle Hire',
   'TV & Film Production Vehicle Hire',
-  'Vehicle Branding',
 ];
 
 export const services: Service[] = [
@@ -194,24 +192,6 @@ export const services: Service[] = [
       'Background vehicle placements',
       'Unit base and production crew transport',
       'Location scout and production recce vehicles',
-    ],
-  },
-  {
-    id: 'vehicle-branding',
-    category: 'Vehicle Branding',
-    slug: 'vehicle-branding',
-    icon: '/icons/vehicle-branding.svg',
-    title: 'Vehicle Branding',
-    shortDescription:
-      'Custom vehicle branding and wraps to promote your brand at events, on the road, or as part of a hire package.',
-    fullDescription:
-      "We offer professional vehicle branding for businesses, events, and campaigns that want maximum visibility on the move. From full wraps and partial graphics to event specific decals, our team works with your artwork and brief to present your brand on a premium vehicle. Branding can be added to hire packages for product launches, matric dances, corporate events, and promotional activations.",
-    useCases: [
-      'Corporate fleet and campaign branding',
-      'Event vehicle wraps and graphics',
-      'Promotional activations and product launches',
-      'Branded matric dance and wedding vehicles',
-      'Temporary branding for film and media productions',
     ],
   },
 ];

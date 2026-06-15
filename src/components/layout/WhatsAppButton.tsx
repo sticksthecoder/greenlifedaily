@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * WhatsAppButton — fixed floating WhatsApp CTA visible on all pages.
  *
@@ -5,6 +7,7 @@
  */
 
 import { company } from '@/data/company';
+import { useFloatingCtaVisibility } from '@/hooks/useFloatingCtaVisibility';
 
 const DEFAULT_MESSAGE =
   'Hi Greenlife Daily, I would like to enquire about vehicle hire.';
@@ -23,6 +26,7 @@ function WhatsAppIcon() {
 }
 
 export default function WhatsAppButton() {
+  const visible = useFloatingCtaVisibility();
   const whatsAppNumber =
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? company.whatsAppNumber;
 
@@ -36,13 +40,18 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Greenlife Daily on WhatsApp"
+      aria-hidden={!visible}
+      tabIndex={visible ? 0 : -1}
       className={[
         'fixed bottom-6 right-4 z-50',
         'inline-flex min-h-[56px] min-w-[56px] items-center justify-center',
         'rounded-full bg-[#25D366] p-4 text-white shadow-lg',
-        'transition-all duration-200 hover:bg-[#1ebe57] hover:shadow-xl',
+        'transition-all duration-300 hover:bg-[#1ebe57] hover:shadow-xl',
         'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]',
         'active:scale-95',
+        visible
+          ? 'translate-y-0 opacity-100'
+          : 'pointer-events-none translate-y-2 opacity-0',
       ].join(' ')}
     >
       <WhatsAppIcon />

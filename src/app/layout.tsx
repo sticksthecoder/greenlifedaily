@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="flex min-h-screen flex-col antialiased">
+      <body className="flex min-h-screen flex-col overflow-x-hidden antialiased">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-green-600 focus:px-4 focus:py-2 focus:text-white"
@@ -66,7 +66,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Navbar />
-        <div className="flex-1">{children}</div>
+        <div className="min-w-0 flex-1 overflow-x-clip">{children}</div>
         <Footer />
         <WhatsAppButton />
         <StickyQuoteCta />

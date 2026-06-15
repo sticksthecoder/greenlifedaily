@@ -7,8 +7,7 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
-import ClickToCallButton from '@/components/shared/ClickToCallButton';
-import { NAV_LINKS, QUOTE_FORM_HREF } from '@/data/navigation';
+import { NAV_LINKS } from '@/data/navigation';
 
 interface MobileNavMenuProps {
   open: boolean;
@@ -104,17 +103,6 @@ export default function MobileNavMenu({
             );
           })}
         </ul>
-
-        <div className="flex shrink-0 flex-col gap-3 border-t border-charcoal-100 px-4 py-4">
-          <ClickToCallButton className="w-full justify-center" />
-          <Link
-            href={QUOTE_FORM_HREF}
-            className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-green-600 px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 active:scale-95"
-            onClick={onClose}
-          >
-            Request a Quote
-          </Link>
-        </div>
       </nav>
     </div>,
     document.body,

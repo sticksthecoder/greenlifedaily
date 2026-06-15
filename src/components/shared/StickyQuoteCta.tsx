@@ -1,26 +1,22 @@
+'use client';
+
 /**
- * StickyQuoteCta — fixed "Request a Quote" button visible at all scroll positions.
- *
- * Positioned at the bottom-right of the viewport, above the WhatsApp floating
- * button (which typically sits at bottom-right at a lower z-index). The button
- * links to the quote form anchor on the home or contact page.
+ * StickyQuoteCta — fixed quote button anchored above the WhatsApp FAB.
  *
  * Validates: Requirements 12.3, 12.4
  */
 
 import Link from 'next/link';
 import { QUOTE_FORM_HREF } from '@/data/navigation';
+import { useFloatingCtaVisibility } from '@/hooks/useFloatingCtaVisibility';
 
-/**
- * Inline SVG for the document/quote icon — no external image request.
- */
 function QuoteIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="w-6 h-6 shrink-0"
+      className="h-6 w-6 shrink-0"
       aria-hidden="true"
     >
       <path
@@ -33,28 +29,25 @@ function QuoteIcon() {
   );
 }
 
-/**
- * StickyQuoteCta renders a fixed green "Request a Quote" button anchored to
- * the bottom-right of the screen. It is visible on every page at every scroll
- * position and navigates the visitor to the quote form section.
- *
- * Positioning note: `bottom-24` (6 rem) gives clearance above a WhatsApp
- * floating button that typically sits at `bottom-6`. Adjust if the WhatsApp
- * button uses a different offset.
- */
 export default function StickyQuoteCta() {
+  const visible = useFloatingCtaVisibility();
+
   return (
     <Link
       href={QUOTE_FORM_HREF}
       aria-label="Request a quote"
+      aria-hidden={!visible}
+      tabIndex={visible ? 0 : -1}
       className={[
         'fixed bottom-24 right-4 z-40',
-        'flex items-center justify-center min-h-[52px] min-w-[52px]',
-        'rounded-full bg-green-600 p-3.5',
-        'text-white shadow-lg',
-        'transition-all duration-200 hover:bg-green-700 hover:shadow-xl',
+        'flex min-h-[52px] min-w-[52px] items-center justify-center',
+        'rounded-full bg-green-600 p-3.5 text-white shadow-lg',
+        'transition-all duration-300 hover:bg-green-700 hover:shadow-xl',
         'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600',
-        'active:bg-green-800 active:scale-95',
+        'active:scale-95 active:bg-green-800',
+        visible
+          ? 'translate-y-0 opacity-100'
+          : 'pointer-events-none translate-y-2 opacity-0',
       ].join(' ')}
     >
       <QuoteIcon />
