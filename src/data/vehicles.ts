@@ -176,7 +176,7 @@ export const vehicles: Vehicle[] = [
 
     altText:
 
-      'BMW X3 luxury SUV available for premium vehicle hire',
+      'Black BMW X3 luxury SUV, three-quarter front view with LED headlights',
 
     featured: false,
 
