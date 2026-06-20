@@ -13,7 +13,7 @@ const envPath = join(__dirname, '..', '.env.local');
 
 function loadEnvFile(path) {
   if (!existsSync(path)) {
-    console.error('Missing .env.local — copy .env.example and fill in SMTP_PASS.');
+    console.error('Missing .env.local — copy .env.example and fill in SMTP settings.');
     process.exit(1);
   }
 
@@ -23,7 +23,15 @@ function loadEnvFile(path) {
     const eq = trimmed.indexOf('=');
     if (eq === -1) continue;
     const key = trimmed.slice(0, eq).trim();
-    const value = trimmed.slice(eq + 1).trim();
+    let value = trimmed.slice(eq + 1).trim();
+    const isDoubleQuoted = value.startsWith('"') && value.endsWith('"');
+    const isSingleQuoted = value.startsWith("'") && value.endsWith("'");
+    if (isDoubleQuoted || isSingleQuoted) {
+      value = value.slice(1, -1);
+    }
+    if (isDoubleQuoted) {
+      value = value.replace(/\\(\$|"|\\)/g, '$1');
+    }
     if (!process.env[key]) process.env[key] = value;
   }
 }
@@ -31,24 +39,47 @@ function loadEnvFile(path) {
 loadEnvFile(envPath);
 
 const { SMTP_HOST, SMTP_USER, SMTP_PASS, SMTP_FROM, GREENLIFE_EMAIL } = process.env;
+const port = Number(process.env.SMTP_PORT ?? 587);
 
-if (!SMTP_USER || !SMTP_PASS) {
-  console.error('\nSMTP_PASS is empty in .env.local.');
-  console.error('1. Enable 2-Step Verification on your Google account');
-  console.error('2. Create an App Password: https://myaccount.google.com/apppasswords');
-  console.error('3. Add it to .env.local as SMTP_PASS=your16charpassword');
-  console.error('4. Restart the dev server (npm run dev)\n');
+if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+  console.error('\nSMTP settings are incomplete in .env.local.');
+  console.error('Set SMTP_HOST, SMTP_USER, and SMTP_PASS from your email provider.');
+  console.error('Example for mariam@greenlifedaily.co.za:');
+  console.error('  SMTP_HOST=mail.greenlifedaily.co.za');
+  console.error('  SMTP_PORT=587');
+  console.error('  SMTP_USER=mariam@greenlifedaily.co.za');
+  console.error('  SMTP_PASS=your-mailbox-password\n');
   process.exit(1);
 }
 
-const transporter = SMTP_HOST?.includes('gmail')
-  ? nodemailer.createTransport({ service: 'gmail', auth: { user: SMTP_USER, pass: SMTP_PASS } })
-  : nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: Number(process.env.SMTP_PORT ?? 587),
-      secure: Number(process.env.SMTP_PORT) === 465,
-      auth: { user: SMTP_USER, pass: SMTP_PASS },
-    });
+const transporter = nodemailer.createTransport({
+  host: SMTP_HOST,
+  port,
+  secure: port === 465,
+  requireTLS: port === 587,
+  auth: { user: SMTP_USER, pass: SMTP_PASS },
+});
+
+try {
+  await transporter.verify();
+} catch (err) {
+  const error = err instanceof Error ? err : new Error(String(err));
+  console.error('\nSMTP connection failed.');
+  console.error(`Host: ${SMTP_HOST}:${port}`);
+  console.error(`User: ${SMTP_USER}`);
+  console.error(`Password loaded: ${SMTP_PASS ? `yes (${SMTP_PASS.length} characters)` : 'no — check .env.local'}`);
+
+  if ('code' in error && error.code === 'EAUTH') {
+    console.error('\n535 Incorrect authentication data usually means:');
+    console.error('- Wrong mailbox password (reset it in your hosting control panel)');
+    console.error('- Mailbox mariam@greenlifedaily.co.za does not exist yet');
+    console.error('- SMTP_USER must be the full email address');
+    console.error('- If the password contains # or $, use single quotes in .env.local, e.g. SMTP_PASS=\'your#pass\'');
+    console.error('\nConfirm you can log in at webmail with the same email and password.');
+  }
+
+  throw error;
+}
 
 const info = await transporter.sendMail({
   from: SMTP_FROM ?? SMTP_USER,
@@ -58,5 +89,5 @@ const info = await transporter.sendMail({
   html: '<p>If you received this, the <strong>quote form email setup</strong> is working.</p>',
 });
 
-console.log(`\nTest email sent to ${GREENLIFE_EMAIL}`);
+console.log(`\nTest email sent to ${GREENLIFE_EMAIL ?? SMTP_USER}`);
 console.log(`Message ID: ${info.messageId}\n`);

@@ -35,22 +35,15 @@ function createTransporter() {
 
   if (!host || !user || !pass) {
     throw new Error(
-      'Missing SMTP configuration. Set SMTP_HOST, SMTP_USER, and SMTP_PASS in .env.local. ' +
-        'For Gmail, use an App Password: https://myaccount.google.com/apppasswords',
+      'Missing SMTP configuration. Set SMTP_HOST, SMTP_USER, and SMTP_PASS in your environment.',
     );
-  }
-
-  if (host.includes('gmail')) {
-    return nodemailer.createTransport({
-      service: 'gmail',
-      auth: { user, pass },
-    });
   }
 
   return nodemailer.createTransport({
     host,
     port,
     secure: port === 465,
+    requireTLS: port === 587,
     auth: { user, pass },
   });
 }
